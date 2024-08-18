@@ -100,7 +100,7 @@ if(args.CLI_PARAM_VERBOSE):
     print(f'{Fore.GREEN}Modell:{Fore.RESET} {raspberry_model}')
     print(f'{Fore.GREEN}GPIOs:{Fore.RESET}\n{config_sections}')
     printRaspberry(raspberry_model)
-    print(f'           {Style.BRIGHT}{Fore.LIGHTGREEN_EX} ↻ Raspberry um 90° nach rechts gedreht ↻ {Style.RESET_ALL}')
+    print(f'           {Style.BRIGHT}{Fore.GREEN} ↻ Raspberry um 90° nach rechts gedreht ↻ {Style.RESET_ALL}')
     print('')
 
 pi_box_end=f'{Fore.GREEN}│{Fore.RESET}'
