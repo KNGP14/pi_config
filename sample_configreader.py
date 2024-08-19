@@ -1,7 +1,7 @@
 import configparser
 
 config = configparser.ConfigParser()
-config.read('pi_gpio.config')
+config.read('pi.config')
 
 def getGPIO(query_name, query_config):
     for section in query_config.sections():
