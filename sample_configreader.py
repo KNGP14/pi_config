@@ -20,4 +20,4 @@ def getGPIO(query_name, query_config):
 print(getGPIO("HAUPTSCHALTER_BEWAESSERUNG", config))
 print(getGPIO("HAUPTSCHALTER_BEWAESSERUNG", config)["gpio"])
 print(getGPIO("HAUPTSCHALTER_BEWAESSERUNG", config)["mode"])
-print(getGPIO("HAUPTSCHALTER_BEWAESSERUNG", config)["name"])
+print(getGPIO("HAUPTSCHALTER_BEWAESSERUNG", config)["name"]) 
