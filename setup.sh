@@ -12,6 +12,7 @@ echo "Überprüfe die Verfügbarkeit von Python3 ..."
 if ! command -v python3 &> /dev/null
 then
     echo " ⛔ python3 wurde nicht gefunden. Bitte installieren und erneut versuchen!"
+    echo ""
     exit 1
 else
     echo " ✅ python3 wurde gefunden."
@@ -24,6 +25,7 @@ mkdir -p $DIR/venv
 if [ $? != 0 ]; then
     echo ""
     echo "⛔ Installation abgebrochen!"
+    echo ""
     exit 1
 fi
 echo " 💡 python3 -m venv $DIR/venv/"
@@ -31,6 +33,7 @@ python3 -m venv $DIR/venv/
 if [ $? != 0 ]; then
     echo ""
     echo "⛔ Installation abgebrochen!"
+    echo ""
     exit 1
 fi
 
@@ -45,9 +48,11 @@ $pip install -r $DIR/requirements.txt
 if [ $? != 0 ]; then
     echo ""
     echo "⛔ Installation abgebrochen!"
+    echo ""
     exit 1
 fi
 
 echo ""
 echo "🚀 Installation abgeschlossen."
+echo ""
 exit 0
