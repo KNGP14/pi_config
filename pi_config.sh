@@ -7,4 +7,4 @@ do
     args="$args $arg";
     i=$((i + 1));
 done
-env/bin/python3 pi_gpio-config.py $args
+venv/bin/python3 pi_gpio-config.py $args
