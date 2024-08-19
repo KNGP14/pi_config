@@ -26,7 +26,7 @@ if [ $? != 0 ]; then
     echo "⛔ Installation abgebrochen!"
     exit 1
 fi
-echo " 🏗️  python3 -m venv $DIR/venv/"
+echo " 💡 python3 -m venv $DIR/venv/"
 python3 -m venv $DIR/venv/
 if [ $? != 0 ]; then
     echo ""
