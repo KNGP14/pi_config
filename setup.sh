@@ -1,13 +1,53 @@
 #!/bin/bash
 
+DIR=`dirname "$0"`
 
-echo "The script you are running has:"
-echo "basename: [$(basename "$0")]"
-echo "dirname : [$(dirname "$0")]"
-echo "pwd     : [$(pwd)]"
 echo ""
-echo "mkdir $(dirname "$0")/venv"
+echo "====================="
+echo "Installationsprogramm"
+echo "====================="
 
-#mkdir venv
-#python3 -m venv venv/
-#pip install -r requirements.txt
+echo ""
+echo "Überprüfe die Verfügbarkeit von Python3 ..."
+if ! command -v python3 &> /dev/null
+then
+    echo " ⛔ python3 wurde nicht gefunden. Bitte installieren und erneut versuchen!"
+    exit 1
+else
+    echo " ✅ python3 wurde gefunden."
+fi
+
+echo ""
+echo "Installiere virtuelle Python-Umgebung ..."
+echo " 💡 mkdir $DIR/venv"
+mkdir -p $DIR/venv
+if [ $? != 0 ]; then
+    echo ""
+    echo "⛔ Installation abgebrochen!"
+    exit 1
+fi
+echo " 🏗️  python3 -m venv $DIR/venv/"
+python3 -m venv $DIR/venv/
+if [ $? != 0 ]; then
+    echo ""
+    echo "⛔ Installation abgebrochen!"
+    exit 1
+fi
+
+echo ""
+echo "Installiere Python-Bibliotheken ..."
+pip="$DIR/venv/bin/pip"
+if [ ! -f "$pip" ]; then
+    pip="$DIR/venv/Scripts/pip3.exe"
+fi
+echo " 📦 $pip install -r $DIR/requirements.txt"
+$pip install -r $DIR/requirements.txt
+if [ $? != 0 ]; then
+    echo ""
+    echo "⛔ Installation abgebrochen!"
+    exit 1
+fi
+
+echo ""
+echo "🚀 Installation abgeschlossen."
+exit 0
