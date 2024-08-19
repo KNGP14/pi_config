@@ -105,6 +105,7 @@ if(args.CLI_PARAM_VERBOSE):
 
 pi_box_end=f'{Fore.GREEN}│{Fore.RESET}'
 print('{0} ──────────────────────────────────────────────────────────────┐{1}'.format(Fore.GREEN, Fore.RESET))
+print('{0: >63}{1}│{2}'.format("", Fore.GREEN, Fore.RESET))
 print('{0: >19}    {1}3V3{2}  {3}(1) (2){4}  {5}5V{6}     {7: <19}{8}'.format("", Back.RED, Back.RESET, Fore.WHITE, Fore.RESET, Back.RED, Back.RESET, "", pi_box_end))
 print('{0: >19}  {1}GPIO2{2}  {3}(3) (4){4}  {5}5V{6}     {7: <19}{8}'.format(getGPIO(2), "", "", Fore.WHITE, Fore.RESET, Back.RED, Back.RESET, "", pi_box_end))
 print('{0: >19}  {1}GPIO3{2}  {3}(5) (6){4}  {5}GND{6}    {7: <19}{8}'.format(getGPIO(3), "", "", Fore.WHITE, Fore.RESET, Style.DIM, Style.NORMAL, "", pi_box_end))
