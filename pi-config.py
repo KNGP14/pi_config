@@ -21,11 +21,11 @@ parser = ArgumentParser(
 parser.add_argument(
             "-f",
             "--file",
-            default="pi_gpio.config",
+            default="pi.config",
             dest="CLI_PARAM_CONFIG_FILE",
             required=False,
             metavar="Dateiname",
-            help="Andere Konfigurationsdatei verwenden anstelle von pi_gpio.config")
+            help="Andere Konfigurationsdatei verwenden anstelle von pi.config")
 
 parser.add_argument(
             "-v",
